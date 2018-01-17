@@ -1,4 +1,4 @@
-/*  Блок Логотип  */
+/*  Block logo  */
 
 .logo{
 	text-align: center;
@@ -6,19 +6,35 @@
 	padding-bottom: 40px;
 }
 .logo__title{
-	font: 700 38px 'Noto Sans', sans-serif;
+	font-size: 33px;
+	font-weight: 700;
 	color: #000;
 	line-height: 1.5;
-	letter-spacing: 7px;
+	letter-spacing: 5px;
 	text-transform: uppercase;
 	
+	@media only screen and (max-width : 768px){
+		.logo__title{
+		font-size: 38px;
+		letter-spacing: 7px;
+	}
+	}
 }
+
 .logo__subtitle{
-	font: 700 16px 'Noto Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
 	color: #A1BBD9;
 	line-height: 1;
 	letter-spacing: 7px;
 	text-transform: uppercase;
+	
+	@media only screen and (max-width : 768px){
+		.logo__subtitle{
+		font-size: 16px;
+		letter-spacing: 9px;
+	}
+	}
 }
 
-/*  //Блок Логотип  */
+/*  //Block logo  */
