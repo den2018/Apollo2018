@@ -11,13 +11,13 @@
 	<meta name="description" content="">
 	
 	<!-- Style -->
-	<link rel="stylesheet" href="node_modules/normalize/normalize.css">
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 	<link rel="stylesheet" href="fonts/als-rubl/als-rubl.css">
 	<link rel="stylesheet" href="fonts/noto/noto.css">
 	<link rel="stylesheet" href="fonts/notoserif/notoserif.css">
-	
+	<link rel="stylesheet" href="css/main.css">
 	<!-- FavIcons  -->
 	<link rel="shortcut icon" href="img/favicon/favicon-48x48.ico" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
@@ -37,18 +37,27 @@
 <!-- logo -->
  <div class="container">
  	<div class="logo">
- 		<h1 class="logo__title">Аполло 404</h1>
- 		<p class="logo__subtitle">Хостинг компания</p>
+ 		<div class="logo__title">Аполло 404</div>
+ 		<div class="logo__subtitle">Хостинг компания</div>
  	</div>
  </div>
 <!--  //logo -->
 
 <!-- Navigation -->
-<div class="nav">
-	<div class="container">
-		<div class="block">Навигация</div>
+<nav class="mobile-navigation">
+	<a href="#" id="navigation-toggle" class="navigation__toggle-button">Навигация</a>
+	<div class="container container-mobile-no-padding">
+		<!-- <div id="navigation-toggle" class="navigation__toggle-button">Навигация</div> -->
+			<ul id="mobile-nav" class="mobile-navigation__list">
+				<li class="mobile-navigation__list-item"><a href="#">Главная</a></li>
+				<li class="mobile-navigation__list-item"><a href="#">Как-мы-работаем</a></li>
+				<li class="mobile-navigation__list-item"><a href="#">Фрилансерам</a></li>
+				<li class="mobile-navigation__list-item"><a href="#">Стартапам</a></li>
+				<li class="mobile-navigation__list-item"><a href="#">Тарифы</a></li>
+				<li class="mobile-navigation__list-item"><a href="#">Контакты</a></li>
+			</ul>
 	</div>
-</div>
+</nav>
 <!-- //Navigation -->
 
 <!-- Slider -->
@@ -147,7 +156,7 @@
 </div>
 <!-- //footer-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.js"></script>')</script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 	<script src="js/main.js"></script>

@@ -1,31 +1,153 @@
-/*  Блок Логотип  */
+/*  Block logo  */
 .logo {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 40px;
 }
 .logo__title {
-  font: 700 38px 'Noto Sans', sans-serif;
+  font-size: 33px;
+  font-weight: 700;
   color: #000;
   line-height: 1.5;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 768px) {
+  .logo__title .logo__title {
+    font-size: 38px;
+    letter-spacing: 7px;
+  }
+}
 .logo__subtitle {
-  font: 700 16px 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   color: #A1BBD9;
   line-height: 1;
   letter-spacing: 7px;
   text-transform: uppercase;
 }
-/*  //Блок Логотип  */
+@media only screen and (max-width: 768px) {
+  .logo__subtitle .logo__subtitle {
+    font-size: 16px;
+    letter-spacing: 9px;
+  }
+}
+/*  //Block logo  */
+/*  navigation  */
+.mobile-navigation {
+  background: #38383A;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 992px) {
+  .mobile-navigation {
+    background: #38383A;
+    padding: 25px 0 25px 0;
+  }
+}
+.mobile-navigation a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 22px 0 22px 0;
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .mobile-navigation a {
+    padding: 0;
+    display: inline;
+  }
+}
+.mobile-navigation a:hover,
+.mobile-navigation a.active {
+  color: #ffcc00;
+}
+.mobile-navigation .mobile-navigation__list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  background: #35577D;
+}
+@media only screen and (min-width: 992px) {
+  .mobile-navigation .mobile-navigation__list {
+    display: flex;
+  }
+}
+.mobile-navigation .mobile-navigation__list .mobile-navigation__list-item {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #466a92;
+}
+@media only screen and (min-width: 992px) {
+  .mobile-navigation .mobile-navigation__list .mobile-navigation__list-item {
+    border-bottom: none;
+    padding: 0;
+  }
+}
+.mobile-navigation .mobile-navigation__list .mobile-navigation__list-item.active {
+  color: #ffcc00;
+}
+.navigation__toggle-button {
+  display: block;
+  position: relative;
+  padding: 25px 15px 25px 15px;
+  /* Medium Devices, Desktops - adaptive styles bofore 992px */
+}
+.navigation__toggle-button:before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  width: 25px;
+  height: 20px;
+  background: url("../img/icons/navigation-icon.png") no-repeat;
+  background-position: 0 0;
+}
+.navigation__toggle-button:focus,
+.navigation__toggle-button:active {
+  background: #16385F;
+}
+@media only screen and (min-width: 992px) {
+  .navigation__toggle-button {
+    display: none;
+  }
+}
+.navigation__togle-button--active {
+  background: #16385F;
+}
+.container-mobile-no-padding {
+  padding: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .container-mobile-no-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 970px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .container-mobile-no-padding {
+    width: 1170px;
+  }
+}
+/*  //navigation  */
+/*  base  */
 html,
 body {
   height: 100%;
+  min-width: 320px;
   margin: 0;
   padding: 0;
   font-size: 10px;
   line-height: 1.4;
+  font-family: 'Noto Sans', sans-serif;
 }
 /*============================================*/
 .block {
@@ -38,9 +160,6 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.nav {
-  background: #555;
-}
 .slider {
   background: #1d62f0;
 }
@@ -52,6 +171,16 @@ body {
   background: #252525;
 }
 /*==============================================*/
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens - adaptive styles bofore 1200px */
+/* Medium Devices, Desktops - adaptive styles bofore 992px */
+/* Small Devices, Tablets - adaptive styles bofore 768px */
+/* Extra Small Devices, Phones - adaptive styles bofore 480px */
+/* Custom, iPhone Retina - adaptive styles bofore 320px */
+/*  //base  */
+/*  function  */
+/*  //function  */
+/*  until  */
 /*
  * Box-sizing-model
  */
@@ -59,6 +188,15 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 /*
  * Responsive images
@@ -96,3 +234,6 @@ textarea {
   color: #000;
   padding: 0.2em 0;
 }
+/*  //until  */
+/*  variables  */
+/*  //variables  */
