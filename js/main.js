@@ -9,13 +9,14 @@
 			//Открываем или скрываем меню
 			$(nav).slideToggle();
 
-			//Добавляем модификатор --active
-			$(this).toggleClass('.navigation__togle-button--active');
+			// Добавляем модификатор --active
+	    $(this).toggleClass('navigation__toggle-button--active');
+
 		});
 		//При изменении размера окна, в большую сторону, если меню было скрыто показывает его.
 		$(window).resize(function(){
 			var w = $(window).width();
-			if(w > 720 && nav.is(':hidden')){
+			if(w > 992){
 				nav.removeAttr('style');
 			}
 		});	

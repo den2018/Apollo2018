@@ -1,6 +1,6 @@
 /*  navigation  */
 .mobile-navigation{
-	background: #38383A;;
+	background: #38383A;
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold;
@@ -15,10 +15,8 @@
 	a{
 		color: #FFF;
 		text-decoration: none;	
-		padding: 22px 0 22px 0;
+		padding: 22px 15px 22px 15px;
 		display: block;
-		padding-left: 15px;
-		padding-right: 15px;
 		
 		@media only screen and (min-width : 992px) {
 		padding: 0;
@@ -36,13 +34,15 @@
 		margin: 0;
 		padding: 0;
 		justify-content: space-between;
-		background: #35577D;
+		// background: #35577D;
+		background: rgba(53,87,125,0.9);
 
 		@media only screen and (min-width : 992px) {
 		display: flex;
+		background-color: transparent;
 		}
 		
-		
+	}	
 	.mobile-navigation__list-item{
 		margin: 0;
 		padding: 0;
@@ -54,13 +54,13 @@
 		}
 		&.active { color: #ffcc00; }
 	}
-	}
 	
 }
  
 .navigation__toggle-button{
 	display: block;
 	position: relative;
+	cursor: pointer;
 	
 	&:before{
 		content: "";
@@ -72,7 +72,10 @@
 		background: url("../img/icons/navigation-icon.png") no-repeat;
 		background-position: 0 0;
 	}
+
 	padding: 25px 15px 25px 15px;
+	background-color: #38383A;
+	
 	&:focus, &:active{
 		background: #16385F;
 	}
@@ -82,12 +85,13 @@
 	}
 }
 
-.navigation__togle-button--active{
+.navigation__toggle-button--active {
 	background: #16385F;
 }
 
 .container-mobile-no-padding{
-	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
 	width: 100%;
 	
 	@media only screen and (min-width : 992px) {
