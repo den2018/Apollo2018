@@ -1,8 +1,13 @@
 /*  Block logo  */
 .logo {
   text-align: center;
-  padding-top: 30px;
   padding-bottom: 40px;
+  padding-top: 80px;
+}
+@media (min-width: 992px) {
+  .logo {
+    padding-top: 30px;
+  }
 }
 .logo__title {
   font-size: 33px;
@@ -41,6 +46,18 @@
   font-weight: bold;
   letter-spacing: 3px;
   text-transform: uppercase;
+  box-shadow: 0px 5px 10px 0px #2a496d;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+@media only screen and (min-width: 992px) {
+  .mobile-navigation {
+    position: relative;
+  }
 }
 @media only screen and (min-width: 992px) {
   .mobile-navigation {
@@ -70,7 +87,7 @@
   margin: 0;
   padding: 0;
   justify-content: space-between;
-  background: rgba(53, 87, 125, 0.9);
+  background: #35577D;
 }
 @media only screen and (min-width: 992px) {
   .mobile-navigation .mobile-navigation__list {
@@ -121,6 +138,7 @@
 }
 .navigation__toggle-button--active {
   background: #16385F;
+  box-shadow: 0px 5px 10px 0px #2a496d;
 }
 .container-mobile-no-padding {
   padding-left: 0;
