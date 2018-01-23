@@ -1,34 +1,50 @@
-// Переменные
-	$(document).ready(function(){
-		var pull = $("#navigation-toggle");
-		var nav = $("#mobile-nav");
-		//События при нажатии на кнопку
-		$(pull).on("click", function(e){
-			//Отменяет стандартное поведение в браузере 
-			e.preventDefault();
-			//Открываем или скрываем меню
-			$(nav).slideToggle();
-			
-			// Добавляем модификатор --active
-	    $(this).toggleClass('navigation__toggle-button--active');
-		});
+	$(document).ready(function() {
 
-		//При изменении размера окна, в большую сторону, если меню было скрыто показывает его.
-		$(window).resize(function(){
-			var w = $(window).width();
-			if(w > 720 && nav.is(':hidden')){
-				nav.removeAttr('style');
-			}
-		});	
+	// Скрипт для показа и скрытия выпадающего меню на смартфонах
+	// Создаем переменые для кнопки и для меню
+	var pull = $('#navigation-toggle');
+	var menu = $('#mobile-nav');
+
+	// Описываем событие при нажатии на кнопку
+	$(pull).on("click", function(e){
+
+	    // Отменяем стандартное поведение ссылки в браузере
+	    e.preventDefault();
+
+	    // Открываем/Скрываем меню
+	    menu.slideToggle();
+
+	    // Добавляем модификатор --active
+	    $(this).toggleClass('navigation__toggle-button--active');
+	    
+	});
+
+	// При изменении размера окна, в большую сторону, если меню было с крыто, показываем его.
+	$(window).resize(function(){
+	    var w = $(window).width();
+	    if(w > 992) {
+	        menu.removeAttr('style');
+	    }
 	});
 
 
+	// Вызов слайдера owl-carousel
+	$("#owlCarousel").owlCarousel({
+		singleItem: true,
+		navigation: true,
+		theme: "top-slider-theme",  
+		navigationText : ["",""],
+		slideSpeed: 800
+	});
+
+	
+});
 
 
 
 
 
 
-			// if(w > 992){
-			// 	nav.removeAttr('style');
-			// }
+
+
+			
