@@ -351,6 +351,31 @@
   color: #777;
 }
 /*  //how-we-work  */
+.service-description__img--xs-m-b-20 {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .service-description__img--xs-m-b-20 {
+    margin-bottom: 0;
+  }
+}
+.service-description__content {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777;
+}
+.service-description__content p {
+  margin-bottom: 22px;
+  margin-top: 0;
+}
+.service-description___button-arrow {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url('../img/icons/arrow-orange.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
 /*  base  */
 html,
 body {
@@ -372,22 +397,6 @@ body {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-.section {
-  padding-top: 60px;
-  padding-bottom: 67px;
-}
-@media (min-width: 1200px) {
-  .section {
-    padding-bottom: 10px;
-  }
-}
-.line {
-  border-top: 1px solid #eaeff5;
-  height: 1px;
-}
-.footer {
-  background: #252525;
 }
 /*==============================================*/
 /*==========  Desktop First Method  ==========*/
@@ -462,10 +471,66 @@ textarea {
   font-size: 28px;
   margin-top: 0;
   margin-bottom: 30px;
+  position: relative;
 }
 @media (min-width: 1200px) {
   .heading {
     font-size: 38px;
     margin-bottom: 40px;
   }
+}
+.heading--smaller-margin {
+  margin-bottom: 20px;
+}
+.heading--number:before {
+  width: 26px;
+  height: 26px;
+  display: block;
+  border-radius: 50%;
+  background: #ffc80a;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  content: "0";
+  padding-top: 4px;
+  padding-left: 8px;
+  position: absolute;
+  top: -40px;
+  left: -13px;
+}
+@media (min-width: 1200px) {
+  .heading--number:before {
+    top: -20px;
+    left: -32px;
+  }
+}
+.heading--number-1:before {
+  content: '1';
+}
+.heading--number-2:before {
+  content: '2';
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+@media (min-width: 1200px) {
+  .section {
+    padding-bottom: 10px;
+  }
+}
+.section--p-t-70 {
+  padding-top: 70px;
+}
+@media (min-width: 992px) {
+  .section--m-p-b-0 {
+    padding-bottom: 0;
+  }
+}
+.line {
+  border-top: 1px solid #eaeff5;
+  height: 1px;
+}
+.footer {
+  background: #252525;
 }
