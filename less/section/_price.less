@@ -1,0 +1,89 @@
+.package {
+	text-align: center;
+	-webkit-border-radius: 7px;
+    border-radius: 7px;
+	background: rgb(255,255,255);
+	box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.3);
+	padding: 34px 25px 47px 25px;
+	padding-top: 34px; 
+	padding-bottom: 47px;
+	margin-bottom: 40px;
+	
+	&.last{
+		margin-bottom: 0;
+	}
+	@media (min-width: 768px) {
+			margin-bottom: 0;
+		}
+}
+
+.package__type {
+	font-size: 12px;
+	color: #242526;
+	margin-bottom: 20px;
+} 
+.package__price {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 1;
+	color: #242526;
+	margin-bottom: 24px;
+	
+	&:after {
+		content: "c";
+		font-family: 'als_rublregular';
+	}
+}
+.package__period {
+	color: #242526;
+	font-size: 12px;
+	margin-bottom: 35px;
+} 
+.package_benefits {
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 40px;
+	
+	ul{
+		margin: 0 0 0 0px;
+		padding: 0;
+		list-style-type: none;
+		text-align: left;
+	
+	@media (min-width: 320px) {
+			margin-left: 50px;
+		}
+
+	@media (min-width: 480px) {
+			margin-left: 125px;
+		}
+
+	@media (min-width: 768px) {
+			margin-left: 6px;
+		}
+
+	@media (min-width: 992px) {
+			margin-left: 40px;
+		}
+
+	@media (min-width: 1200px) {
+			margin-left: 70px;
+		}
+
+		li{
+			margin: 0;
+			padding: 0;
+			margin-bottom: 10px;
+			
+			&:before {
+				content: "";
+				width: 12px;
+				height: 12px;
+				background: url("../img/icons/ok-icon.png") no-repeat;
+				background-position: left 4px;
+				display: inline-block;
+				margin-right: 10px;
+			}
+		}
+	}
+}
