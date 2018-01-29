@@ -29,6 +29,7 @@
 	    }
 	});
 
+<<<<<<< HEAD
 		// Скрываем меню при клике на него на смартфоне и планцете
 	// По клику на ссылку в меню запускаем ф-ю fnstart();
 	$('nav.mobile-navigation a').on("click", function(){
@@ -44,6 +45,14 @@
 			menu.slideToggle();
 		}
 	};
+=======
+	var w =  $(window).width();
+	if ( w < 992 ) {
+		$('nav.mobile-navigation a').on("click", function(){
+			menu.slideToggle();
+		});
+	}
+>>>>>>> 4b9281700b14db1e1da3cb1dfcbd211888864a5f
 
 	// Вызов слайдера owl-carousel
 	$("#owlCarousel").owlCarousel({
