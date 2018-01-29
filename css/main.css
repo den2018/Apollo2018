@@ -190,6 +190,7 @@
   text-align: center;
   line-height: 28px;
   color: #cddfe0;
+  font-weight: 400;
 }
 @media only screen and (min-width: 1200px) {
   .slider__slogan {
@@ -354,6 +355,11 @@
 .service-description__img--xs-m-b-20 {
   margin-bottom: 20px;
 }
+.service-description__img--xs-m-b-20.p-r-l-50 {
+  position: relative;
+  left: -200px;
+  background: red;
+}
 @media (min-width: 768px) {
   .service-description__img--xs-m-b-20 {
     margin-bottom: 0;
@@ -466,10 +472,44 @@
   display: inline-block;
   margin-right: 10px;
 }
+.footer {
+  background: #252525;
+  color: #6c6c6c;
+}
+.footer p {
+  color: #6c6c6c;
+}
+.footer__title {
+  color: #f7f8f9;
+  font-size: 12px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.footer__nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+  color: #6c6c6c;
+  line-height: 20px;
+  margin-bottom: 57px;
+}
+.footer__nav li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+.footer__nav a {
+  color: #6c6c6c;
+  text-decoration: none;
+}
+.footer__nav a:hover {
+  color: #ffc80a;
+}
 /*  base  */
 html,
 body {
-  height: 100%;
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -489,18 +529,6 @@ p {
   margin-top: 0;
   margin-bottom: 50px;
 }
-/*============================================*/
-.block {
-  background: #FFDB4C;
-  padding: 20px;
-  color: #000;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-/*==============================================*/
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens - adaptive styles bofore 1200px */
 /* Medium Devices, Desktops - adaptive styles bofore 992px */
@@ -533,7 +561,6 @@ h6 {
 */
 img {
   max-width: 100%;
-  height: 100%;
 }
 /*
  * Cursor change on hover on Buttons
@@ -616,6 +643,9 @@ textarea {
   padding-top: 60px;
   padding-bottom: 50px;
 }
+.section--m-b-80 {
+  margin-bottom: 80px;
+}
 @media (min-width: 1200px) {
   .section {
     padding-bottom: 10px;
@@ -626,7 +656,7 @@ textarea {
 }
 @media (min-width: 992px) {
   .section--m-p-b-0 {
-    padding-bottom: 0;
+    padding-bottom: 30px;
   }
 }
 .line {

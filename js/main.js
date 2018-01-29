@@ -24,9 +24,26 @@
 	    var w = $(window).width();
 	    if(w > 992) {
 	        menu.removeAttr('style');
+	    } else {
+
 	    }
 	});
 
+		// Скрываем меню при клике на него на смартфоне и планцете
+	// По клику на ссылку в меню запускаем ф-ю fnstart();
+	$('nav.mobile-navigation a').on("click", function(){
+		fnstart();
+	});
+
+	// В ф-ии fnstart(); проверяем - если меню открыто (проверяем по наличию класса --active у кнопки pull)
+	// тогда убираем класс модификатор --active у кнопки pull
+	// и сворачиваем/скрываем меню 
+	function fnstart(){	
+		if ( $("#navigation-toggle").hasClass("navigation__toggle-button--active")  ) {
+   			pull.toggleClass('navigation__toggle-button--active');
+			menu.slideToggle();
+		}
+	};
 
 	// Вызов слайдера owl-carousel
 	$("#owlCarousel").owlCarousel({
@@ -34,10 +51,13 @@
 		navigation: true,
 		theme: "top-slider-theme",  
 		navigationText : ["",""],
-		slideSpeed: 800
+		slideSpeed: 1000
 	});
 
-	
+	//slide2id - плавная прокрутка по ссылкам внутри страницы
+	$("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
+	highlightSelector:"nav a"
+	});
 });
 
 
